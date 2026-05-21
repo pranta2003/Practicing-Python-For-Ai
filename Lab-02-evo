@@ -1,0 +1,1195 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "615cd583",
+   "metadata": {
+    "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
+    "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:24.177733Z",
+     "iopub.status.busy": "2026-05-21T08:13:24.177379Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.252450Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.251374Z"
+    },
+    "papermill": {
+     "duration": 1.084337,
+     "end_time": "2026-05-21T08:13:25.254661+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:24.170324+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hey\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd \n",
+    "print(\"hey\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "78b3a90d",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.265236Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.264779Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.271778Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.270944Z"
+    },
+    "papermill": {
+     "duration": 0.014548,
+     "end_time": "2026-05-21T08:13:25.273787+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.259239+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0    10\n",
+      "1    20\n",
+      "2    30\n",
+      "dtype: int64\n"
+     ]
+    }
+   ],
+   "source": [
+    "p = pd.Series([10 , 20  , 30])\n",
+    "print(p)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "c0c3ce20",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.283609Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.283289Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.288370Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.287537Z"
+    },
+    "papermill": {
+     "duration": 0.012259,
+     "end_time": "2026-05-21T08:13:25.290187+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.277928+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'apple1': [10, 20, 30], 'Banana': [10, 20, 30], 'orange': [10, 20, 30], 10: [10]}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = { \"apple1\" : [10 , 20 , 30] , \"Banana\" : [10 , 20 , 30] , \"orange\" : [10 , 20 , 30] , 10 : [ 10]}\n",
+    "\n",
+    "print(s)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "2f1c7b62",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.300531Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.299720Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.304527Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.303713Z"
+    },
+    "papermill": {
+     "duration": 0.012046,
+     "end_time": "2026-05-21T08:13:25.306417+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.294371+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "([10, 20], [10])\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = [10 , 20]  , [10]\n",
+    "print(a)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "407d0a57",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.316932Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.316099Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.331710Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.330822Z"
+    },
+    "papermill": {
+     "duration": 0.022862,
+     "end_time": "2026-05-21T08:13:25.333549+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.310687+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "    0     1\n",
+      "0  10  20.0\n",
+      "1  10   NaN\n"
+     ]
+    }
+   ],
+   "source": [
+    "d = pd.DataFrame(a)\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9fdbb291",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.343754Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.343427Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.365663Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.364460Z"
+    },
+    "papermill": {
+     "duration": 0.029806,
+     "end_time": "2026-05-21T08:13:25.367729+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.337923+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange\n",
+      "0     10      10      10\n",
+      "1     20      20      20\n",
+      "2     30      30      30\n",
+      "   apple  Banana\n",
+      "0     10      10\n",
+      "1     20      20\n",
+      "2     30      30\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = { \"apple\" : [10 , 20 , 30] , \"Banana\" : [10 , 20 , 30] , \"orange\" : [10 , 20 , 30] }\n",
+    "\n",
+    "d = pd.DataFrame(s)\n",
+    "print(d)\n",
+    "\n",
+    "o = d[[\"apple\" , \"Banana\"]]\n",
+    "print(o)\n",
+    "# f = pd.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "9623bf34",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.378507Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.378174Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.396577Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.395637Z"
+    },
+    "papermill": {
+     "duration": 0.026037,
+     "end_time": "2026-05-21T08:13:25.398354+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.372317+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>apple</th>\n",
+       "      <th>Banana</th>\n",
+       "      <th>orange</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>10</td>\n",
+       "      <td>10</td>\n",
+       "      <td>10</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   apple  Banana  orange\n",
+       "0     10      10      10"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#locate function - row wise value instruction\n",
+    "\n",
+    "d.loc[[0]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "8e4bb539",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.409964Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.409379Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.415707Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.414822Z"
+    },
+    "papermill": {
+     "duration": 0.014009,
+     "end_time": "2026-05-21T08:13:25.417680+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.403671+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "np.int64(30)"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#locate function - row wise + column value instruction\n",
+    "\n",
+    "d.iloc[2,1]\n",
+    "\n",
+    "d.iloc[1,2]\n",
+    "d.iloc[2,1]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "43b2b1ca",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.429120Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.428490Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.434593Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.433839Z"
+    },
+    "papermill": {
+     "duration": 0.013737,
+     "end_time": "2026-05-21T08:13:25.436452+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.422715+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "np.int64(20)"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[1,2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "62c9f142",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.447471Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.447133Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.455384Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.454454Z"
+    },
+    "papermill": {
+     "duration": 0.016037,
+     "end_time": "2026-05-21T08:13:25.457168+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.441131+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>apple</th>\n",
+       "      <th>Banana</th>\n",
+       "      <th>orange</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>10</td>\n",
+       "      <td>10</td>\n",
+       "      <td>10</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>20</td>\n",
+       "      <td>20</td>\n",
+       "      <td>20</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>30</td>\n",
+       "      <td>30</td>\n",
+       "      <td>30</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   apple  Banana  orange\n",
+       "0     10      10      10\n",
+       "1     20      20      20\n",
+       "2     30      30      30"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[:,:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "5e185084",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.468656Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.467881Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.474636Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.473817Z"
+    },
+    "papermill": {
+     "duration": 0.014547,
+     "end_time": "2026-05-21T08:13:25.476455+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.461908+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "apple     10\n",
+       "Banana    10\n",
+       "orange    10\n",
+       "Name: 0, dtype: int64"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[0,:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "020cdc92",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.488841Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.487886Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.496157Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.495264Z"
+    },
+    "papermill": {
+     "duration": 0.016527,
+     "end_time": "2026-05-21T08:13:25.498095+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.481568+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Name': ['P', 'l', 'c', 'd', 'k'], 'Id': [10, 20, 30, 40, 50], 'mid_mark': [25, 22, 28, 24, 29], 'final_mark': [35, 36, 37, 33, 34]}\n",
+      "  Name  Id  mid_mark  final_mark\n",
+      "0    P  10        25          35\n",
+      "1    l  20        22          36\n",
+      "2    c  30        28          37\n",
+      "3    d  40        24          33\n",
+      "4    k  50        29          34\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Task\n",
+    "s = { \"Name\" : [\"P\" , \"l\" , \"c\" , \"d\" , \"k\"] , \"Id\" : [10 , 20 , 30 , 40 , 50] , \"mid_mark\" : [25, 22 , 28 , 24 , 29] , \"final_mark\" : [35 , 36 , 37 , 33 , 34]}\n",
+    "print(s)\n",
+    "\n",
+    "d = pd.DataFrame(s)\n",
+    "print(d)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a3fe0821",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.509757Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.509416Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.516218Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.515308Z"
+    },
+    "papermill": {
+     "duration": 0.014893,
+     "end_time": "2026-05-21T08:13:25.518016+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.503123+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Name           P\n",
+       "Id            10\n",
+       "mid_mark      25\n",
+       "final_mark    35\n",
+       "Name: 0, dtype: object"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.loc[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "7b88c448",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.529471Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.529144Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.535513Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.534792Z"
+    },
+    "papermill": {
+     "duration": 0.014325,
+     "end_time": "2026-05-21T08:13:25.537184+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.522859+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Name           l\n",
+       "Id            20\n",
+       "mid_mark      22\n",
+       "final_mark    36\n",
+       "Name: 1, dtype: object"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "c60b8118",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.549553Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.548830Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.555860Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.554851Z"
+    },
+    "papermill": {
+     "duration": 0.015195,
+     "end_time": "2026-05-21T08:13:25.557722+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.542527+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0    25\n",
+       "1    22\n",
+       "2    28\n",
+       "3    24\n",
+       "4    29\n",
+       "Name: mid_mark, dtype: int64"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[:,2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "9f8a82f5",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.570517Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.570197Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.574389Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.573459Z"
+    },
+    "papermill": {
+     "duration": 0.012788,
+     "end_time": "2026-05-21T08:13:25.576118+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.563330+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#d.iloc[:,1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "e88a2c28",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.587917Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.587568Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.594921Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.593827Z"
+    },
+    "papermill": {
+     "duration": 0.015553,
+     "end_time": "2026-05-21T08:13:25.596789+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.581236+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Name           k\n",
+       "Id            50\n",
+       "mid_mark      29\n",
+       "final_mark    34\n",
+       "Name: 4, dtype: object"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.iloc[4,:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "c1caed4c",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.609264Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.608919Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.618075Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.617026Z"
+    },
+    "papermill": {
+     "duration": 0.017705,
+     "end_time": "2026-05-21T08:13:25.619976+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.602271+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange\n",
+      "0     10      10      10\n",
+      "1     20      20      20\n",
+      "2    300      34      -5\n",
+      "   apple  Banana  orange\n",
+      "0     10      10      10\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Filtering\n",
+    "\n",
+    "s = { \"apple\" : [10 , 20 , 300] , \"Banana\" : [10 , 20 , 34] , \"orange\" : [10 , 20 , -5] }\n",
+    "\n",
+    "d = pd.DataFrame(s)\n",
+    "print(d)\n",
+    "\n",
+    "\n",
+    "\n",
+    "apple15 = d[d[\"apple\"]<15]\n",
+    "print(apple15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "8db13cc5",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.632591Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.632251Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.643927Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.643101Z"
+    },
+    "papermill": {
+     "duration": 0.020305,
+     "end_time": "2026-05-21T08:13:25.645864+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.625559+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "apple     330\n",
+      "Banana     64\n",
+      "orange     25\n",
+      "dtype: int64\n",
+      "0     30\n",
+      "1     60\n",
+      "2    329\n",
+      "dtype: int64\n",
+      "apple     110.000000\n",
+      "Banana     21.333333\n",
+      "orange      8.333333\n",
+      "dtype: float64\n",
+      "apple     10\n",
+      "Banana    10\n",
+      "orange    -5\n",
+      "dtype: int64\n",
+      "apple     300\n",
+      "Banana     34\n",
+      "orange     20\n",
+      "dtype: int64\n",
+      "apple     164.620776\n",
+      "Banana     12.055428\n",
+      "orange     12.583057\n",
+      "dtype: float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Statical Function\n",
+    "\n",
+    "print( d.sum()) # by dafult it always count in column\n",
+    "print(d.sum(axis = 1))\n",
+    "\n",
+    "\n",
+    "print( d.mean())\n",
+    "print( d.min())\n",
+    "print( d.max())\n",
+    "print( d.std())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "2408492b",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.658455Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.657727Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.665809Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.664984Z"
+    },
+    "papermill": {
+     "duration": 0.016325,
+     "end_time": "2026-05-21T08:13:25.667544+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.651219+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "apple     110.000000\n",
+      "Banana     21.333333\n",
+      "orange      8.333333\n",
+      "dtype: float64\n",
+      "apple     10\n",
+      "Banana    10\n",
+      "orange    -5\n",
+      "dtype: int64\n",
+      "apple     300\n",
+      "Banana     34\n",
+      "orange     20\n",
+      "dtype: int64\n",
+      "apple     164.620776\n",
+      "Banana     12.055428\n",
+      "orange     12.583057\n",
+      "dtype: float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "print( d.mean())\n",
+    "print( d.min())\n",
+    "print( d.max())\n",
+    "print( d.std())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "9b21989c",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.679775Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.679413Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.687496Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.686292Z"
+    },
+    "papermill": {
+     "duration": 0.01643,
+     "end_time": "2026-05-21T08:13:25.689322+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.672892+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0    10\n",
+      "1    20\n",
+      "2    -5\n",
+      "dtype: int64\n",
+      "0     10\n",
+      "1     20\n",
+      "2    300\n",
+      "dtype: int64\n",
+      "0      0.000000\n",
+      "1      0.000000\n",
+      "2    165.982931\n",
+      "dtype: float64\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "print( d.min(axis = 1))\n",
+    "print( d.max(axis = 1))\n",
+    "print( d.std(axis =1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "ac1ab3d5",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.701721Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.701371Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.708344Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.707447Z"
+    },
+    "papermill": {
+     "duration": 0.015405,
+     "end_time": "2026-05-21T08:13:25.710042+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.694637+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange  Total\n",
+      "0     10      10      10     30\n",
+      "1     20      20      20     60\n",
+      "2    300      34      -5    329\n"
+     ]
+    }
+   ],
+   "source": [
+    "d[\"Total\"] = d.sum(axis=1)\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b2cb26df",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.722365Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.722032Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.729130Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.728225Z"
+    },
+    "papermill": {
+     "duration": 0.015602,
+     "end_time": "2026-05-21T08:13:25.730924+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.715322+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange  Total  Min\n",
+      "0     10      10      10     30   10\n",
+      "1     20      20      20     60   20\n",
+      "2    300      34      -5    329   -5\n"
+     ]
+    }
+   ],
+   "source": [
+    "d[\"Min\"] = d.min(axis=1)\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "d2318915",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.744182Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.743834Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.752568Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.750545Z"
+    },
+    "papermill": {
+     "duration": 0.017541,
+     "end_time": "2026-05-21T08:13:25.754515+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.736974+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange  Total  Min  Max\n",
+      "0     10      10      10     30   10   30\n",
+      "1     20      20      20     60   20   60\n",
+      "2    300      34      -5    329   -5  329\n"
+     ]
+    }
+   ],
+   "source": [
+    "d[\"Max\"] = d.max(axis=1)\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "e82912a7",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.767145Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.766795Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.774802Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.773808Z"
+    },
+    "papermill": {
+     "duration": 0.016335,
+     "end_time": "2026-05-21T08:13:25.776514+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.760179+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   apple  Banana  orange  Total  Min  Max        Mean\n",
+      "0     10      10      10     30   10   30   16.666667\n",
+      "1     20      20      20     60   20   60   33.333333\n",
+      "2    300      34      -5    329   -5  329  163.666667\n"
+     ]
+    }
+   ],
+   "source": [
+    "d[\"Mean\"] = d.mean(axis=1)\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "088f56f9",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-05-21T08:13:25.789409Z",
+     "iopub.status.busy": "2026-05-21T08:13:25.789076Z",
+     "iopub.status.idle": "2026-05-21T08:13:25.793974Z",
+     "shell.execute_reply": "2026-05-21T08:13:25.793078Z"
+    },
+    "papermill": {
+     "duration": 0.013826,
+     "end_time": "2026-05-21T08:13:25.795896+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.782070+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "419\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d[\"Total\"].sum())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4e8a38af",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005595,
+     "end_time": "2026-05-21T08:13:25.807189+00:00",
+     "exception": false,
+     "start_time": "2026-05-21T08:13:25.801594+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kaggle": {
+   "accelerator": "none",
+   "dataSources": [
+    {
+     "isSourceIdPinned": false,
+     "sourceId": 179777577,
+     "sourceType": "kernelVersion"
+    }
+   ],
+   "dockerImageVersionId": 31328,
+   "isGpuEnabled": false,
+   "isInternetEnabled": false,
+   "language": "python",
+   "sourceType": "notebook"
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 5.399842,
+   "end_time": "2026-05-21T08:13:26.332146+00:00",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2026-05-21T08:13:20.932304+00:00",
+   "version": "2.7.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
